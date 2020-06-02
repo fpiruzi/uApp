@@ -6,6 +6,9 @@ target 'uApp' do
   use_frameworks!
 
   # Pods for uApp
+  pod 'Alamofire', '~> 5.2'
+  pod 'MBProgressHUD'
+  pod 'SDWebImage'
 
   target 'uAppTests' do
     inherit! :search_paths

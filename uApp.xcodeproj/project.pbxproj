@@ -3,11 +3,25 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0244815E538A08D663C199B7 /* Pods_uApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C1890122FEAF9A2EF83BCAC /* Pods_uApp.framework */; };
+		3D48C6812486EAEA00B601A8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D48C6802486EAEA00B601A8 /* Constants.swift */; };
+		3D48C6832486ED4E00B601A8 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D48C6822486ED4E00B601A8 /* UIHelper.swift */; };
+		3D48C6852486EE7200B601A8 /* Alamofire+CRUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D48C6842486EE7200B601A8 /* Alamofire+CRUD.swift */; };
+		3D48C68C2486F04B00B601A8 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D48C68B2486F04B00B601A8 /* Meal.swift */; };
+		3D48C68E2486F0D200B601A8 /* Meals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D48C68D2486F0D200B601A8 /* Meals.swift */; };
+		3D48C6902486F11B00B601A8 /* MealServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D48C68F2486F11B00B601A8 /* MealServices.swift */; };
+		3D48C6922486F43E00B601A8 /* MealViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D48C6912486F43E00B601A8 /* MealViewModel.swift */; };
+		3D48C6942486F56500B601A8 /* MealMVP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D48C6932486F56500B601A8 /* MealMVP.swift */; };
+		3D48C6962486F5C900B601A8 /* MealPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D48C6952486F5C900B601A8 /* MealPresenter.swift */; };
+		3D48C6982486F74400B601A8 /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D48C6972486F74400B601A8 /* MealViewController.swift */; };
+		3D48C69A2486F75200B601A8 /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D48C6992486F75200B601A8 /* MealTableViewCell.swift */; };
+		3D48C69C2486F78100B601A8 /* Meal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D48C69B2486F78100B601A8 /* Meal.storyboard */; };
+		3D48C69E2486FD3100B601A8 /* UIImage+Rezise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D48C69D2486FD3100B601A8 /* UIImage+Rezise.swift */; };
+		3D48C6A0248704BC00B601A8 /* UIViewController+DismissKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D48C69F248704BC00B601A8 /* UIViewController+DismissKeyboard.swift */; };
 		3D59C6672486A52500082590 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D59C6662486A52500082590 /* AppDelegate.swift */; };
 		3D59C6692486A52500082590 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D59C6682486A52500082590 /* SceneDelegate.swift */; };
 		3D59C66B2486A52500082590 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D59C66A2486A52500082590 /* ViewController.swift */; };
@@ -31,6 +45,20 @@
 /* Begin PBXFileReference section */
 		1571109FABB386D3695D8439 /* Pods-uApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uApp.release.xcconfig"; path = "Target Support Files/Pods-uApp/Pods-uApp.release.xcconfig"; sourceTree = "<group>"; };
 		232BC2B8854588616345E59F /* Pods_uAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_uAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D48C6802486EAEA00B601A8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3D48C6822486ED4E00B601A8 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
+		3D48C6842486EE7200B601A8 /* Alamofire+CRUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alamofire+CRUD.swift"; sourceTree = "<group>"; };
+		3D48C68B2486F04B00B601A8 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		3D48C68D2486F0D200B601A8 /* Meals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meals.swift; sourceTree = "<group>"; };
+		3D48C68F2486F11B00B601A8 /* MealServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealServices.swift; sourceTree = "<group>"; };
+		3D48C6912486F43E00B601A8 /* MealViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewModel.swift; sourceTree = "<group>"; };
+		3D48C6932486F56500B601A8 /* MealMVP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealMVP.swift; sourceTree = "<group>"; };
+		3D48C6952486F5C900B601A8 /* MealPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPresenter.swift; sourceTree = "<group>"; };
+		3D48C6972486F74400B601A8 /* MealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewController.swift; sourceTree = "<group>"; };
+		3D48C6992486F75200B601A8 /* MealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
+		3D48C69B2486F78100B601A8 /* Meal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Meal.storyboard; sourceTree = "<group>"; };
+		3D48C69D2486FD3100B601A8 /* UIImage+Rezise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Rezise.swift"; sourceTree = "<group>"; };
+		3D48C69F248704BC00B601A8 /* UIViewController+DismissKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+DismissKeyboard.swift"; sourceTree = "<group>"; };
 		3D59C6632486A52500082590 /* uApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D59C6662486A52500082590 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D59C6682486A52500082590 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +96,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D48C6862486EF4A00B601A8 /* Meal */ = {
+			isa = PBXGroup;
+			children = (
+				3D48C6932486F56500B601A8 /* MealMVP.swift */,
+				3D48C6872486EF6500B601A8 /* Model */,
+				3D48C6882486EF6C00B601A8 /* Services */,
+				3D48C6892486EF7300B601A8 /* Presenter */,
+				3D48C68A2486EF8100B601A8 /* View */,
+			);
+			path = Meal;
+			sourceTree = "<group>";
+		};
+		3D48C6872486EF6500B601A8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3D48C68B2486F04B00B601A8 /* Meal.swift */,
+				3D48C68D2486F0D200B601A8 /* Meals.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3D48C6882486EF6C00B601A8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3D48C68F2486F11B00B601A8 /* MealServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		3D48C6892486EF7300B601A8 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3D48C6952486F5C900B601A8 /* MealPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		3D48C68A2486EF8100B601A8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3D48C6912486F43E00B601A8 /* MealViewModel.swift */,
+				3D48C6972486F74400B601A8 /* MealViewController.swift */,
+				3D48C6992486F75200B601A8 /* MealTableViewCell.swift */,
+				3D48C69B2486F78100B601A8 /* Meal.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		3D59C65A2486A52400082590 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +193,7 @@
 			children = (
 				3D59C6662486A52500082590 /* AppDelegate.swift */,
 				3D59C6682486A52500082590 /* SceneDelegate.swift */,
+				3D48C6802486EAEA00B601A8 /* Constants.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -124,6 +201,7 @@
 		3D59C6892486A65F00082590 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				3D48C6862486EF4A00B601A8 /* Meal */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -131,6 +209,10 @@
 		3D59C68A2486A67100082590 /* Extensions+Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				3D48C6822486ED4E00B601A8 /* UIHelper.swift */,
+				3D48C6842486EE7200B601A8 /* Alamofire+CRUD.swift */,
+				3D48C69D2486FD3100B601A8 /* UIImage+Rezise.swift */,
+				3D48C69F248704BC00B601A8 /* UIViewController+DismissKeyboard.swift */,
 			);
 			path = "Extensions+Helpers";
 			sourceTree = "<group>";
@@ -166,6 +248,7 @@
 				3D59C65F2486A52500082590 /* Sources */,
 				3D59C6602486A52500082590 /* Frameworks */,
 				3D59C6612486A52500082590 /* Resources */,
+				DEE072467D092F43A4DF2CEF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -239,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D59C6732486A52600082590 /* LaunchScreen.storyboard in Resources */,
+				3D48C69C2486F78100B601A8 /* Meal.storyboard in Resources */,
 				3D59C6702486A52600082590 /* Assets.xcassets in Resources */,
 				3D59C66E2486A52500082590 /* Main.storyboard in Resources */,
 			);
@@ -276,6 +360,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		DEE072467D092F43A4DF2CEF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-uApp/Pods-uApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-uApp/Pods-uApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-uApp/Pods-uApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E8DE40B9363D79546BC02E63 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -305,9 +406,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D48C68E2486F0D200B601A8 /* Meals.swift in Sources */,
+				3D48C6962486F5C900B601A8 /* MealPresenter.swift in Sources */,
+				3D48C69E2486FD3100B601A8 /* UIImage+Rezise.swift in Sources */,
+				3D48C69A2486F75200B601A8 /* MealTableViewCell.swift in Sources */,
+				3D48C6922486F43E00B601A8 /* MealViewModel.swift in Sources */,
 				3D59C66B2486A52500082590 /* ViewController.swift in Sources */,
+				3D48C6A0248704BC00B601A8 /* UIViewController+DismissKeyboard.swift in Sources */,
+				3D48C6942486F56500B601A8 /* MealMVP.swift in Sources */,
 				3D59C6672486A52500082590 /* AppDelegate.swift in Sources */,
+				3D48C68C2486F04B00B601A8 /* Meal.swift in Sources */,
+				3D48C6852486EE7200B601A8 /* Alamofire+CRUD.swift in Sources */,
 				3D59C6692486A52500082590 /* SceneDelegate.swift in Sources */,
+				3D48C6982486F74400B601A8 /* MealViewController.swift in Sources */,
+				3D48C6832486ED4E00B601A8 /* UIHelper.swift in Sources */,
+				3D48C6812486EAEA00B601A8 /* Constants.swift in Sources */,
+				3D48C6902486F11B00B601A8 /* MealServices.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

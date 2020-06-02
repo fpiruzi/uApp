@@ -22,10 +22,9 @@
 		3D48C69C2486F78100B601A8 /* Meal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D48C69B2486F78100B601A8 /* Meal.storyboard */; };
 		3D48C69E2486FD3100B601A8 /* UIImage+Rezise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D48C69D2486FD3100B601A8 /* UIImage+Rezise.swift */; };
 		3D48C6A0248704BC00B601A8 /* UIViewController+DismissKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D48C69F248704BC00B601A8 /* UIViewController+DismissKeyboard.swift */; };
+		3D48C6A2248708AB00B601A8 /* MealDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D48C6A1248708AB00B601A8 /* MealDetailViewController.swift */; };
 		3D59C6672486A52500082590 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D59C6662486A52500082590 /* AppDelegate.swift */; };
 		3D59C6692486A52500082590 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D59C6682486A52500082590 /* SceneDelegate.swift */; };
-		3D59C66B2486A52500082590 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D59C66A2486A52500082590 /* ViewController.swift */; };
-		3D59C66E2486A52500082590 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D59C66C2486A52500082590 /* Main.storyboard */; };
 		3D59C6702486A52600082590 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D59C66F2486A52600082590 /* Assets.xcassets */; };
 		3D59C6732486A52600082590 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D59C6712486A52600082590 /* LaunchScreen.storyboard */; };
 		3D59C67E2486A52600082590 /* uAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D59C67D2486A52600082590 /* uAppTests.swift */; };
@@ -59,11 +58,10 @@
 		3D48C69B2486F78100B601A8 /* Meal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Meal.storyboard; sourceTree = "<group>"; };
 		3D48C69D2486FD3100B601A8 /* UIImage+Rezise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Rezise.swift"; sourceTree = "<group>"; };
 		3D48C69F248704BC00B601A8 /* UIViewController+DismissKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+DismissKeyboard.swift"; sourceTree = "<group>"; };
+		3D48C6A1248708AB00B601A8 /* MealDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailViewController.swift; sourceTree = "<group>"; };
 		3D59C6632486A52500082590 /* uApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D59C6662486A52500082590 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D59C6682486A52500082590 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3D59C66A2486A52500082590 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3D59C66D2486A52500082590 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3D59C66F2486A52600082590 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D59C6722486A52600082590 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D59C6742486A52600082590 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -140,6 +138,7 @@
 				3D48C6972486F74400B601A8 /* MealViewController.swift */,
 				3D48C6992486F75200B601A8 /* MealTableViewCell.swift */,
 				3D48C69B2486F78100B601A8 /* Meal.storyboard */,
+				3D48C6A1248708AB00B601A8 /* MealDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -170,8 +169,6 @@
 				3D59C6882486A65400082590 /* Application */,
 				3D59C6892486A65F00082590 /* Features */,
 				3D59C68A2486A67100082590 /* Extensions+Helpers */,
-				3D59C66A2486A52500082590 /* ViewController.swift */,
-				3D59C66C2486A52500082590 /* Main.storyboard */,
 				3D59C66F2486A52600082590 /* Assets.xcassets */,
 				3D59C6712486A52600082590 /* LaunchScreen.storyboard */,
 				3D59C6742486A52600082590 /* Info.plist */,
@@ -324,7 +321,6 @@
 				3D59C6732486A52600082590 /* LaunchScreen.storyboard in Resources */,
 				3D48C69C2486F78100B601A8 /* Meal.storyboard in Resources */,
 				3D59C6702486A52600082590 /* Assets.xcassets in Resources */,
-				3D59C66E2486A52500082590 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,11 +403,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D48C68E2486F0D200B601A8 /* Meals.swift in Sources */,
+				3D48C6A2248708AB00B601A8 /* MealDetailViewController.swift in Sources */,
 				3D48C6962486F5C900B601A8 /* MealPresenter.swift in Sources */,
 				3D48C69E2486FD3100B601A8 /* UIImage+Rezise.swift in Sources */,
 				3D48C69A2486F75200B601A8 /* MealTableViewCell.swift in Sources */,
 				3D48C6922486F43E00B601A8 /* MealViewModel.swift in Sources */,
-				3D59C66B2486A52500082590 /* ViewController.swift in Sources */,
 				3D48C6A0248704BC00B601A8 /* UIViewController+DismissKeyboard.swift in Sources */,
 				3D48C6942486F56500B601A8 /* MealMVP.swift in Sources */,
 				3D59C6672486A52500082590 /* AppDelegate.swift in Sources */,
@@ -444,14 +440,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3D59C66C2486A52500082590 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3D59C66D2486A52500082590 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3D59C6712486A52600082590 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

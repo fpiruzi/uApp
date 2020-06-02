@@ -15,6 +15,10 @@ class MealViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchTextField: UITextField!
     
+    static var identifier: String {
+        return String(describing: self)
+    }
+    
     override func viewDidLoad() {
         self.presenter = MealPresenter(mealView: self, mealServices: MealServices())
         self.prepareTableView()
@@ -49,8 +53,26 @@ extension MealViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let meal = self.presenter.getMealAt(index: indexPath)
-        self.showAlert(title: meal?.name ?? "Generic meal", message: meal?.category ?? "No category")
+        if let meal = self.presenter.getMealAt(index: indexPath) {
+            self.showMealDetail(meal: meal)
+        } else {
+            self.showAlert()
+        }
+    }
+}
+
+extension MealViewController {
+    fileprivate func showMealDetail(meal: MealViewModel?){
+        guard let mealDetailVC = self.storyboard?.instantiateViewController(identifier: MealDetailViewController.identifier) as? MealDetailViewController else {
+            return
+        }
+        mealDetailVC.meal = meal
+        
+        if let navController = self.navigationController {
+            navController.show(mealDetailVC, sender: nil)
+        } else {
+            self.present(mealDetailVC, animated: true, completion: nil)
+        }
     }
 }
 

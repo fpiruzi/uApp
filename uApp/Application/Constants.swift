@@ -17,6 +17,7 @@ public struct Constants {
         static let warning = "Warning"
         static let emptyList = "Empty List"
         static let emptyString = ""
+        static let emptyInstructions = "Ups! This meal does not have instructions!"
     }
     
     struct API {

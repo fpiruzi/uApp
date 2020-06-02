@@ -27,4 +27,8 @@ public class MealViewModel {
     public var picture: String? {
         return self.meal?.strMealThumb
     }
+    
+    public var instructions: String {
+        return self.meal?.strInstructions ?? Constants.Strings.emptyInstructions
+    }
 }

@@ -11,6 +11,7 @@ import Foundation
 public class MealViewModel {
     
     private let meal: Meal?
+    private let ingredientKeyPattern = "strIngredient"
     
     public init(meal: Meal?) {
         self.meal = meal
@@ -29,6 +30,26 @@ public class MealViewModel {
     }
     
     public var instructions: String {
-        return self.meal?.strInstructions ?? Constants.Strings.emptyInstructions
+        return Constants.Strings.instructions + (isself.meal?.strInstructions ?? Constants.Strings.emptyInstructions)
+    }
+    
+    public var ingredients: String? {
+        guard let mealModel = self.meal else {
+            return nil
+        }
+        
+        var ingredientString: String = ""
+        let ingredientsMirror = Mirror(reflecting: mealModel)
+        
+        for element in ingredientsMirror.children {
+            if element.label?.starts(with: ingredientKeyPattern) ?? false, let ingredient = element.value as? String, !ingredient.isEmpty {
+                let formattedIngredient = ingredient + ", "
+                ingredientString += formattedIngredient
+            }
+        }
+        if !ingredientString.isEmpty {
+            ingredientString = String(ingredientString.dropLast(2))
+        }
+        return Constants.Strings.ingredients + ingredientString
     }
 }

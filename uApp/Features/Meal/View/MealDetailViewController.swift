@@ -12,6 +12,7 @@ import UIKit
 class MealDetailViewController: UIViewController {
     
     @IBOutlet weak var mealNameLabel: UILabel!
+    @IBOutlet weak var mealIngredientsLabel: UILabel!
     @IBOutlet weak var mealInstructionsLabel: UILabel!
     
     var meal: MealViewModel?
@@ -24,6 +25,7 @@ class MealDetailViewController: UIViewController {
         super.viewDidLoad()
         self.setMealName()
         self.setMealInstructions()
+        self.setMealIngredients()
     }
 }
 
@@ -34,5 +36,9 @@ extension MealDetailViewController {
     
     fileprivate func setMealInstructions(){
         self.mealInstructionsLabel.text = self.meal?.instructions
+    }
+    
+    fileprivate func setMealIngredients(){
+        self.mealIngredientsLabel.text = self.meal?.ingredients
     }
 }

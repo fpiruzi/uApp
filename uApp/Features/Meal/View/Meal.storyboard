@@ -173,8 +173,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hhT-Dw-LnT">
-                                <rect key="frame" x="10" y="10" width="355" height="70.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="hhT-Dw-LnT">
+                                <rect key="frame" x="10" y="10" width="355" height="112.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVR-xp-7yd">
                                         <rect key="frame" x="0.0" y="0.0" width="355" height="20"/>
@@ -185,12 +185,21 @@
                                         <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Ingredients" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrc-Lx-ojf">
+                                        <rect key="frame" x="0.0" y="24" width="355" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="9aI-Xh-max"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Heavy" family="SF Pro Display" pointSize="10"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Instructions" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPi-qC-hax">
-                                        <rect key="frame" x="0.0" y="28" width="355" height="42.5"/>
+                                        <rect key="frame" x="0.0" y="70" width="355" height="42.5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="cHB-fs-7hj"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="SFProDisplay-Heavy" family="SF Pro Display" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Heavy" family="SF Pro Display" pointSize="11"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -200,13 +209,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="AK0-Iu-Jv9" firstAttribute="trailing" secondItem="hhT-Dw-LnT" secondAttribute="trailing" constant="10" id="MgM-MI-vCb"/>
-                            <constraint firstItem="AK0-Iu-Jv9" firstAttribute="bottom" secondItem="hhT-Dw-LnT" secondAttribute="bottom" priority="750" constant="10" id="bAq-Kp-F2g"/>
+                            <constraint firstItem="AK0-Iu-Jv9" firstAttribute="bottom" secondItem="hhT-Dw-LnT" secondAttribute="bottom" priority="950" constant="10" id="bAq-Kp-F2g"/>
                             <constraint firstItem="hhT-Dw-LnT" firstAttribute="top" secondItem="AK0-Iu-Jv9" secondAttribute="top" constant="10" id="j4K-5S-mNK"/>
                             <constraint firstItem="hhT-Dw-LnT" firstAttribute="leading" secondItem="AK0-Iu-Jv9" secondAttribute="leading" constant="10" id="q40-dt-hrd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AK0-Iu-Jv9"/>
                     </view>
                     <connections>
+                        <outlet property="mealIngredientsLabel" destination="vrc-Lx-ojf" id="eg0-rM-r46"/>
                         <outlet property="mealInstructionsLabel" destination="RPi-qC-hax" id="aN2-eD-Sor"/>
                         <outlet property="mealNameLabel" destination="fVR-xp-7yd" id="huL-th-N6F"/>
                     </connections>

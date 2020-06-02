@@ -18,6 +18,8 @@ public struct Constants {
         static let emptyList = "Empty List"
         static let emptyString = ""
         static let emptyInstructions = "Ups! This meal does not have instructions!"
+        static let instructions = "Instructions: "
+        static let ingredients = "Ingredients: "
     }
     
     struct API {

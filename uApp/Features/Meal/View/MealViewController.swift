@@ -8,12 +8,14 @@
 
 import Foundation
 import UIKit
+import SDWebImage
 
 class MealViewController: UIViewController {
     
     var presenter: MealViewPresenter!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchTextField: UITextField!
+    @IBOutlet weak var bannerImageView: UIImageView!
     
     static var identifier: String {
         return String(describing: self)
@@ -25,6 +27,7 @@ class MealViewController: UIViewController {
         self.prepareSearchTextField()
         self.hideKeyboardWhenUserTapView()
         self.presenter.getMeals(searchString: Constants.Strings.emptyString)
+        self.presenter.getBanner()
     }
 }
 
@@ -91,6 +94,13 @@ extension MealViewController: MealView {
     
     func reloadData() {
         tableView.reloadData()
+    }
+    
+    func showBanner(img: URL) {
+        let imageSize = CGSize(width: 50, height: 50)
+        let transformer = SDImageResizingTransformer(size: imageSize, scaleMode: .fill)
+        let placeholder = UIImage(named: Constants.Image.dishPlacerholder)?.resizeImage(targetSize: imageSize)
+        self.bannerImageView.sd_setImage(with: img , placeholderImage: placeholder, options: .progressiveLoad, context: [.imageTransformer: transformer])
     }
 }
 

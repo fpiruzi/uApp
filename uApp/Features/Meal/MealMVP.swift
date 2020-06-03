@@ -13,6 +13,7 @@ protocol MealView: class {
     func hideLoading()
     func reloadData()
     func showError(msg: String?)
+    func showBanner(img: URL)
 }
 
 protocol MealViewPresenter {
@@ -20,4 +21,5 @@ protocol MealViewPresenter {
     func numberOfSections() -> Int
     func numberOfRows() -> Int
     func getMealAt(index: IndexPath) -> MealViewModel?
+    func getBanner()
 }

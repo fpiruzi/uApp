@@ -29,7 +29,6 @@ extension MealPresenter: MealViewPresenter {
             
             switch result {
             case .success(let data):
-                
                 self?.mealList.removeAll()
                 self?.mealView?.reloadData()
                 
@@ -43,6 +42,26 @@ extension MealPresenter: MealViewPresenter {
                 self?.mealView?.showError(msg: error.asAFError?.errorDescription)
             }
         })
+    }
+    
+    func getBanner() {
+        Timer.scheduledTimer(withTimeInterval: 30, repeats: true) { [weak self] timer in
+            self?.mealServices.getRandomMeal(completionHandler: { [weak self] result in
+                switch result {
+                case .success(let data):
+                    if let randomMeals = data?.meals, let banner = randomMeals.first {
+                        let randomMeal = MealViewModel(meal: banner)
+                        guard let stringURL = randomMeal.picture, let imgURL = URL(string: stringURL) else {
+                            return
+                        }
+                        self?.mealView?.showBanner(img: imgURL)
+                    }
+                case .failure(let error):
+                    timer.invalidate()
+                    self?.mealView?.showError(msg: error.asAFError?.errorDescription)
+                }
+            })
+        }
     }
 
     func numberOfSections() -> Int {

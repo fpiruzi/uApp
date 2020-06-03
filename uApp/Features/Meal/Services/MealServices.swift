@@ -20,10 +20,8 @@ class MealServices {
         AF.GET(Constants.API.searchUrl, query: queryParams).validate().responseDecodable(of: Meals.self) { response in
             switch response.result {
             case let .success(result):
-                print(result)
                 completionHandler(.success(result))
             case let .failure(error):
-                print(error.localizedDescription)
                 completionHandler(.failure(error))
             }
         }
@@ -36,6 +34,20 @@ class MealServices {
         }
         
         return [Constants.API.urlSearchQueryParamKey : search]
+    }
+}
+
+extension MealServices {
+    
+    func getRandomMeal(completionHandler: @escaping(Result<Meals?, Error>) -> Void){
+        AF.GET(Constants.API.randomMeal).validate().responseDecodable(of: Meals.self) { response in
+            switch response.result {
+            case let .success(result):
+                completionHandler(.success(result))
+            case let .failure(error):
+                completionHandler(.failure(error))
+            }
+        }
     }
 }
 

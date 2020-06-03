@@ -30,7 +30,7 @@ public class MealViewModel {
     }
     
     public var instructions: String {
-        return Constants.Strings.instructions + (isself.meal?.strInstructions ?? Constants.Strings.emptyInstructions)
+        return Constants.Strings.instructions + (self.meal?.strInstructions ?? Constants.Strings.emptyInstructions)
     }
     
     public var ingredients: String? {

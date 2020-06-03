@@ -25,6 +25,7 @@ public struct Constants {
     struct API {
         static let searchUrl = "https://www.themealdb.com/api/json/v1/1/search.php"
         static let urlSearchQueryParamKey = "s"
+        static let randomMeal = "https://www.themealdb.com/api/json/v1/1/random.php"
     }
     
     struct Image {

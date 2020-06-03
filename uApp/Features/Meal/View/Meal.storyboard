@@ -195,8 +195,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xyX-HT-zzj" customClass="YTPlayerView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="h0v-a9-vAh"/>
+                                </constraints>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="hhT-Dw-LnT">
-                                <rect key="frame" x="10" y="10" width="355" height="112.5"/>
+                                <rect key="frame" x="10" y="55" width="355" height="112.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVR-xp-7yd">
                                         <rect key="frame" x="0.0" y="0.0" width="355" height="20"/>
@@ -231,8 +238,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="AK0-Iu-Jv9" firstAttribute="trailing" secondItem="hhT-Dw-LnT" secondAttribute="trailing" constant="10" id="MgM-MI-vCb"/>
+                            <constraint firstItem="xyX-HT-zzj" firstAttribute="leading" secondItem="AK0-Iu-Jv9" secondAttribute="leading" id="TjV-7k-a7N"/>
+                            <constraint firstItem="AK0-Iu-Jv9" firstAttribute="trailing" secondItem="xyX-HT-zzj" secondAttribute="trailing" id="UcI-jk-c10"/>
                             <constraint firstItem="AK0-Iu-Jv9" firstAttribute="bottom" secondItem="hhT-Dw-LnT" secondAttribute="bottom" priority="950" constant="10" id="bAq-Kp-F2g"/>
-                            <constraint firstItem="hhT-Dw-LnT" firstAttribute="top" secondItem="AK0-Iu-Jv9" secondAttribute="top" constant="10" id="j4K-5S-mNK"/>
+                            <constraint firstItem="hhT-Dw-LnT" firstAttribute="top" secondItem="xyX-HT-zzj" secondAttribute="bottom" constant="5" id="bfH-2h-K4X"/>
+                            <constraint firstItem="xyX-HT-zzj" firstAttribute="top" secondItem="AK0-Iu-Jv9" secondAttribute="top" id="mk1-sJ-Vpj"/>
                             <constraint firstItem="hhT-Dw-LnT" firstAttribute="leading" secondItem="AK0-Iu-Jv9" secondAttribute="leading" constant="10" id="q40-dt-hrd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AK0-Iu-Jv9"/>
@@ -241,6 +251,7 @@
                         <outlet property="mealIngredientsLabel" destination="vrc-Lx-ojf" id="eg0-rM-r46"/>
                         <outlet property="mealInstructionsLabel" destination="RPi-qC-hax" id="aN2-eD-Sor"/>
                         <outlet property="mealNameLabel" destination="fVR-xp-7yd" id="huL-th-N6F"/>
+                        <outlet property="player" destination="xyX-HT-zzj" id="XKb-rD-jYb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UyH-bE-OdW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

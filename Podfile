@@ -9,6 +9,7 @@ target 'uApp' do
   pod 'Alamofire', '~> 5.2'
   pod 'MBProgressHUD'
   pod 'SDWebImage'
+  pod "youtube-ios-player-helper", "~> 0.1.4"
 
   target 'uAppTests' do
     inherit! :search_paths

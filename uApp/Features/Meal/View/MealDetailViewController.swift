@@ -8,12 +8,14 @@
 
 import Foundation
 import UIKit
+import youtube_ios_player_helper
 
 class MealDetailViewController: UIViewController {
     
     @IBOutlet weak var mealNameLabel: UILabel!
     @IBOutlet weak var mealIngredientsLabel: UILabel!
     @IBOutlet weak var mealInstructionsLabel: UILabel!
+    @IBOutlet weak var player: YTPlayerView!
     
     var meal: MealViewModel?
     
@@ -26,6 +28,7 @@ class MealDetailViewController: UIViewController {
         self.setMealName()
         self.setMealInstructions()
         self.setMealIngredients()
+        self.setVideo()
     }
 }
 
@@ -40,5 +43,11 @@ extension MealDetailViewController {
     
     fileprivate func setMealIngredients(){
         self.mealIngredientsLabel.text = self.meal?.ingredients
+    }
+    
+    fileprivate func setVideo(){
+        if let videoId = self.meal?.youtube {
+            self.player.load(withVideoId: videoId)
+        }
     }
 }

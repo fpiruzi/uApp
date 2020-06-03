@@ -52,4 +52,9 @@ public class MealViewModel {
         }
         return Constants.Strings.ingredients + ingredientString
     }
+    
+    public var youtube: String? {
+        let youtubeId = meal?.strYoutube?.components(separatedBy: "v=")
+        return youtubeId?.last
+    }
 }
